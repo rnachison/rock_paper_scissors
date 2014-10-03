@@ -1,0 +1,13 @@
+h1 {
+	font-family: “Arial Black”, “Arial Bold”, Gadget, sans-serif;
+	color: rgb(255, 0, 232);
+	font-size: 50px;
+}
+
+body {
+	background-color: rgb(255, 22, 47);
+}
+
+h2 {
+	margin-top: 15%;
+}
