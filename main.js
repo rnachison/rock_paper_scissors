@@ -4,12 +4,21 @@ var userWeapon;
 var userChose;
 var chooseRock = function() { 
   userWeapon = "rock";
+  var userChoseText = document.createElement('text');
+userChoseText.innerHTML = userWeapon;
+document.getElementById("userChose").appendChild(userChoseText);
 };
 var choosePaper = function() {
   userWeapon = "paper";
+  var userChoseText = document.createElement('text');
+userChoseText.innerHTML = userWeapon;
+document.getElementById("userChose").appendChild(userChoseText);
 };
 var chooseScissors = function() {
   userWeapon = "scissors";
+  var userChoseText = document.createElement('text');
+userChoseText.innerHTML = userWeapon;
+document.getElementById("userChose").appendChild(userChoseText);
 }
 
 var compChoice = Math.floor(Math.random() * 3);
@@ -22,9 +31,10 @@ if (compChoice = 1) {
 };
 console.log(compWeapon);
 
-var userChoseText = document.createElement('text');
-userChoseText.innerHTML = userWeapon;
-document.getElementById("userChose").appendChild(userChoseText);
+document.getElementById("button").addEventListener("click", function(){
+    document.getElementById("compChose").innerHTML = "I chose " + compWeapon;
+});
+
 
 /*var userChoseText = function() {
 var userWeaponNode = document.createTextNode(userWeapon);
@@ -38,5 +48,4 @@ node.appendChild(compWeaponNode);
 document.getElementById("compChose").appendChild(node);
 }*/
 
-userChoseText;
 // compChoseText();
