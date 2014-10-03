@@ -1,7 +1,17 @@
 alert("Let's fight!");
-var choose = function() { 
-  var userWeapon = document.getElementById('userChoice').value;
+
+var userWeapon;
+var userChose;
+var chooseRock = function() { 
+  userWeapon = "rock";
 };
+var choosePaper = function() {
+  userWeapon = "paper";
+};
+var chooseScissors = function() {
+  userWeapon = "scissors";
+}
+
 var compChoice = Math.floor(Math.random() * 3);
 if (compChoice = 1) {
   compWeapon = "rock";
@@ -12,8 +22,21 @@ if (compChoice = 1) {
 };
 console.log(compWeapon);
 
-var choseText = function() {
+var userChoseText = document.createElement('text');
+userChoseText.innerHTML = userWeapon;
+document.getElementById("userChose").appendChild(userChoseText);
+
+/*var userChoseText = function() {
+var userWeaponNode = document.createTextNode(userWeapon);
+node.appendChild(userWeaponNode);
+document.getElementById("userChose").appendChild(node);
+}
+
+var compChoseText = function() {
 var compWeaponNode=document.createTextNode(compWeapon);
 node.appendChild(compWeaponNode);
-document.getElementById("chose").appendChild(node);
-}
+document.getElementById("compChose").appendChild(node);
+}*/
+
+userChoseText;
+// compChoseText();
