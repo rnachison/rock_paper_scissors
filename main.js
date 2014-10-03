@@ -5,26 +5,26 @@ var userChose;
 var chooseRock = function() { 
   userWeapon = "rock";
   var userChoseText = document.createElement('text');
-userChoseText.innerHTML = userWeapon;
-document.getElementById("userChose").appendChild(userChoseText);
+  userChoseText.innerHTML = "You chose " + userWeapon + "!";
+  document.getElementById("userChose").appendChild(userChoseText);
 };
 var choosePaper = function() {
   userWeapon = "paper";
   var userChoseText = document.createElement('text');
-userChoseText.innerHTML = userWeapon;
-document.getElementById("userChose").appendChild(userChoseText);
+  userChoseText.innerHTML = userWeapon + "!";
+  document.getElementById("userChose").appendChild(userChoseText);
 };
 var chooseScissors = function() {
   userWeapon = "scissors";
   var userChoseText = document.createElement('text');
-userChoseText.innerHTML = userWeapon;
-document.getElementById("userChose").appendChild(userChoseText);
+  userChoseText.innerHTML = userWeapon + "!";
+  document.getElementById("userChose").appendChild(userChoseText);
 }
 
 var compChoice = Math.floor(Math.random() * 3);
-if (compChoice = 1) {
+if (compChoice == 1) {
   compWeapon = "rock";
-} else if (compChoice = 2) {
+} else if (compChoice == 2) {
   compWeapon = "paper";
 } else {
   compWeapon = "scissors";
@@ -32,20 +32,57 @@ if (compChoice = 1) {
 console.log(compWeapon);
 
 document.getElementById("button").addEventListener("click", function(){
-    document.getElementById("compChose").innerHTML = "I chose " + compWeapon;
+    document.getElementById("compChose").innerHTML = "I chose " + compWeapon + " though.";
+    document.getElementById("okay").innerHTML = "Okay";
 });
 
+var game = function() {
+  if (userWeapon == "rock") {
+    if (compWeapon == "rock") {
+      document.getElementById("button").addEventListener("click", function(){
+        document.getElementById("result").innerHTML = "I guess everyone both wins and loses.";
+    });
+    } else if (compWeapon = "paper") {
+        document.getElementById("button").addEventListener("click", function(){
+          document.getElementById("result").innerHTML = "OH SORRY I GUESS I WON";
+      });
+    } else {
+        document.getElementById("button").addEventListener("click", function(){
+          document.getElementById("result").innerHTML = "You win!";
+      });
+    };
+  } else if (userWeapon == "paper") {
+      if (compWeapon == "rock") {
+        document.getElementById("button").addEventListener("click", function(){
+        document.getElementById("result").innerHTML = "You win!";
+      });
+      } else if (compWeapon == "paper") {
+          document.getElementById("button").addEventListener("click", function(){
+            document.getElementById("result").innerHTML = "I hope we can both feel fine about this result.";
+          });
+      } else {
+          document.getElementById("button").addEventListener("click", function(){
+            document.getElementById("result").innerHTML = "SNIP I WIN";
+          });
+      };
 
-/*var userChoseText = function() {
-var userWeaponNode = document.createTextNode(userWeapon);
-node.appendChild(userWeaponNode);
-document.getElementById("userChose").appendChild(node);
-}
+  } else {
+      if (compWeapon == "rock") {
+        document.getElementById("button").addEventListener("click", function(){
+          document.getElementById("result").innerHTML = "SMASH";
+        });
+      } else if (compWeapon == "paper") {
+        document.getElementById("button").addEventListener("click", function(){
+          document.getElementById("result").innerHTML = "You win!";
+        });
+      } else {
+        document.getElementById("button").addEventListener("click", function(){
+          document.getElementById("result").innerHTML = "Oh..I guess, truce?";
+      });
+    };
+  };
+};
 
-var compChoseText = function() {
-var compWeaponNode=document.createTextNode(compWeapon);
-node.appendChild(compWeaponNode);
-document.getElementById("compChose").appendChild(node);
-}*/
-
-// compChoseText();
+document.getElementById("okay").addEventListener("click", function(){
+  game();
+});
