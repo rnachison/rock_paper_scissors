@@ -2,6 +2,10 @@
 
 var userWeapon;
 var userChose;
+var startOver = function() {
+  document.getElementById("result").innerHTML = "";
+  document.getElementById("reset").innerHTML = "";
+};
 var chooseRock = function() { 
   userWeapon = "rock";
   document.getElementById("userChose").innerHTML = "You chose " + userWeapon + "!";
@@ -39,35 +43,69 @@ document.getElementById("button").addEventListener("click", function() {
 var game = function() {
   if (userWeapon == "rock") {
     if (compWeapon == "rock") {
+          document.getElementById("userChose").innerHTML = "";
+          document.getElementById("compChose").innerHTML = "";
           document.getElementById("result").innerHTML = "I guess everyone both wins and loses.";
+          document.getElementById("reset").innerHTML = "Reset";
+          document.getElementById("okay").innerHTML = "";
     } else if (compWeapon = "paper") {
+          document.getElementById("userChose").innerHTML = "";
+          document.getElementById("compChose").innerHTML = "";
           document.getElementById("result").innerHTML = "OH SORRY I GUESS I WON";
+          document.getElementById("reset").innerHTML = "Reset";
+          document.getElementById("okay").innerHTML = "";
     } else {
+          document.getElementById("userChose").innerHTML = "";
+          document.getElementById("compChose").innerHTML = "";
           document.getElementById("result").innerHTML = "You win!";
+          document.getElementById("reset").innerHTML = "Reset";
+          document.getElementById("okay").innerHTML = "";
     };
   } else if (userWeapon == "paper") {
       if (compWeapon == "rock") {
+        document.getElementById("userChose").innerHTML = "";
+        document.getElementById("compChose").innerHTML = "";
         document.getElementById("result").innerHTML = "You win!";
+        document.getElementById("reset").innerHTML = "Reset";
+        document.getElementById("okay").innerHTML = "";
       } else if (compWeapon == "paper") {
+            document.getElementById("userChose").innerHTML = "";
+            document.getElementById("compChose").innerHTML = "";
             document.getElementById("result").innerHTML = "I hope we can both feel fine about this result.";
+            document.getElementById("reset").innerHTML = "Reset";
+            document.getElementById("okay").innerHTML = "";
       } else {
+            document.getElementById("userChose").innerHTML = "";
+            document.getElementById("compChose").innerHTML = "";
             document.getElementById("result").innerHTML = "SNIP I WIN";
+            document.getElementById("reset").innerHTML = "Reset";
+            document.getElementById("okay").innerHTML = "";
       };
 
   } else {
       if (compWeapon == "rock") {
+          document.getElementById("userChose").innerHTML = "";
+          document.getElementById("compChose").innerHTML = "";
           document.getElementById("result").innerHTML = "SMASH";
+          document.getElementById("reset").innerHTML = "Reset";
+          document.getElementById("okay").innerHTML = "";
       } else if (compWeapon == "paper") {
+          document.getElementById("userChose").innerHTML = "";
+          document.getElementById("compChose").innerHTML = "";
           document.getElementById("result").innerHTML = "You win!";
+          document.getElementById("reset").innerHTML = "Reset";
+          document.getElementById("okay").innerHTML = "";
       } else {
+          document.getElementById("userChose").innerHTML = "";
+          document.getElementById("compChose").innerHTML = "";
           document.getElementById("result").innerHTML = "Oh..I guess, truce?";
+          document.getElementById("reset").innerHTML = "Reset";
+          document.getElementById("okay").innerHTML = "";
     };
   };
 };
 
-
 document.getElementById("okay").addEventListener("click", function() {
   game();
 })
-
 

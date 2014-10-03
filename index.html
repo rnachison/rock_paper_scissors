@@ -6,7 +6,8 @@
   </head>
   <body align="center">
     <h1 align="center">Rock Paper Scissors</h1>
-    <h2>Choose your weapon!</h2>
+    <h2>Let's fight it out.</h2>
+    <h3>Choose a weapon.</h3>
     <div id="button">
       <button onclick="chooseRock()" id="rock">Rock</button>
       <button onclick="choosePaper()" id="paper">Paper</button>
@@ -15,7 +16,10 @@
     <p id="userChose"></p>
     <p id="compChose"></p>
     <p id="result"></p>
-    <button id="okay"></button>
+    <div id="box">
+      <button id="okay"></button>
+      <button id="reset" onclick="startOver()" ></button>
+    </div>
     <script src="main.js" type="text/javascript"></script>
   </body>
 </html>
