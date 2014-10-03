@@ -4,21 +4,15 @@ var userWeapon;
 var userChose;
 var chooseRock = function() { 
   userWeapon = "rock";
-  var userChoseText = document.createElement('text');
-  userChoseText.innerHTML = "You chose " + userWeapon + "!";
-  document.getElementById("userChose").appendChild(userChoseText);
+  document.getElementById("userChose").innerHTML = "You chose " + userWeapon + "!";
 };
 var choosePaper = function() {
   userWeapon = "paper";
-  var userChoseText = document.createElement('text');
-  userChoseText.innerHTML = "You chose " + userWeapon + "!";
-  document.getElementById("userChose").appendChild(userChoseText);
+  document.getElementById("userChose").innerHTML = "You chose " + userWeapon + "!";
 };
 var chooseScissors = function() {
   userWeapon = "scissors";
-  var userChoseText = document.createElement('text');
-  userChoseText.innerHTML = "You chose " + userWeapon + "!";
-  document.getElementById("userChose").appendChild(userChoseText);
+  document.getElementById("userChose").innerHTML = "You chose " + userWeapon + "!";
 };
 
 var compChoice = Math.floor(Math.random() * 3);
