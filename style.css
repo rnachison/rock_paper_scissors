@@ -1,13 +1,25 @@
 h1 {
 	font-family: “Arial Black”, “Arial Bold”, Gadget, sans-serif;
-	color: rgb(255, 0, 232);
-	font-size: 50px;
+	font-size: 80px;
 }
 
 body {
 	background-color: rgb(255, 22, 47);
+	color: rgb(255, 0, 232);
 }
 
 h2 {
-	margin-top: 15%;
+	margin-top: 10%;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 50px;
+}
+
+p {
+	font-size: 30px;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+}
+
+button {
+	border-radius: 12px;
+	background-color: rgba(255, 76, 239, .8);
 }
