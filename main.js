@@ -82,7 +82,7 @@ var game = function() {
             document.getElementById("okay").innerHTML = "";
       };
 
-  } else {
+  } else if (userWeapon == "scissors") {
       if (compWeapon == "rock") {
           document.getElementById("userChose").innerHTML = "";
           document.getElementById("compChose").innerHTML = "";
@@ -95,14 +95,18 @@ var game = function() {
           document.getElementById("result").innerHTML = "You win!";
           document.getElementById("reset").innerHTML = "Reset";
           document.getElementById("okay").innerHTML = "";
-      } else {
+      } else if (compWeapon == "scissors") {
           document.getElementById("userChose").innerHTML = "";
           document.getElementById("compChose").innerHTML = "";
           document.getElementById("result").innerHTML = "Oh..I guess, truce?";
           document.getElementById("reset").innerHTML = "Reset";
           document.getElementById("okay").innerHTML = "";
+      } else {
+        console.log("nice try");
+      };
+    } else {
+      console.log("nice try");
     };
-  };
 };
 
 document.getElementById("okay").addEventListener("click", function() {
