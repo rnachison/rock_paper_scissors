@@ -35,7 +35,7 @@ button {
   font-size: 13px;
 }
 
-#button, #box {
+#button {
 	background-color: rgba(204, 0, 186, .2);
 	padding: 1%;
 	width: 15%;
@@ -46,6 +46,7 @@ button {
 
 #box {
   width: 5%;
+  margin: auto;
 }
 
 #box button {
