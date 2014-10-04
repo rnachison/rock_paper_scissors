@@ -5,6 +5,15 @@ var userChose;
 var startOver = function() {
   document.getElementById("result").innerHTML = "";
   document.getElementById("reset").innerHTML = "";
+  var compChoice = Math.floor(Math.random() * 3);
+    if (compChoice == 1) {
+      compWeapon = "rock";
+    } else if (compChoice == 2) {
+      compWeapon = "paper";
+    } else {
+      compWeapon = "scissors";
+    };
+    console.log(compWeapon);
 };
 var chooseRock = function() { 
   userWeapon = "rock";
@@ -63,23 +72,23 @@ var game = function() {
     };
   } else if (userWeapon == "paper") {
       if (compWeapon == "rock") {
-        document.getElementById("userChose").innerHTML = "";
-        document.getElementById("compChose").innerHTML = "";
-        document.getElementById("result").innerHTML = "You win!";
-        document.getElementById("reset").innerHTML = "Reset";
-        document.getElementById("okay").innerHTML = "";
+          document.getElementById("userChose").innerHTML = "";
+          document.getElementById("compChose").innerHTML = "";
+          document.getElementById("result").innerHTML = "You win!";
+          document.getElementById("reset").innerHTML = "Reset";
+          document.getElementById("okay").innerHTML = "";
       } else if (compWeapon == "paper") {
-            document.getElementById("userChose").innerHTML = "";
-            document.getElementById("compChose").innerHTML = "";
-            document.getElementById("result").innerHTML = "I hope we can both feel fine about this result.";
-            document.getElementById("reset").innerHTML = "Reset";
-            document.getElementById("okay").innerHTML = "";
+          document.getElementById("userChose").innerHTML = "";
+          document.getElementById("compChose").innerHTML = "";
+          document.getElementById("result").innerHTML = "I hope we can both feel fine about this result.";
+          document.getElementById("reset").innerHTML = "Reset";
+          document.getElementById("okay").innerHTML = "";
       } else {
-            document.getElementById("userChose").innerHTML = "";
-            document.getElementById("compChose").innerHTML = "";
-            document.getElementById("result").innerHTML = "SNIP I WIN";
-            document.getElementById("reset").innerHTML = "Reset";
-            document.getElementById("okay").innerHTML = "";
+          document.getElementById("userChose").innerHTML = "";
+          document.getElementById("compChose").innerHTML = "";
+          document.getElementById("result").innerHTML = "SNIP I WIN";
+          document.getElementById("reset").innerHTML = "Reset";
+          document.getElementById("okay").innerHTML = "";
       };
 
   } else if (userWeapon == "scissors") {
